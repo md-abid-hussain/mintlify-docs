@@ -1,98 +1,72 @@
 ---
-title: 'Development'
-description: 'Learn how to preview changes locally'
+title: 'Development and Contribution'
+description: 'Lern how to contribute to the OpenSourceSmith platform.'
 ---
 
-<Info>
-  **Prerequisite** You should have installed Node.js (version 18.10.0 or
-  higher).
-</Info>
+This guide provides an overview of how the Open Source Smith Site was developed, including the tools and libraries used in the process.
 
-Step 1. Install Mintlify on your OS:
+## Tools and Libraries Used
 
-<CodeGroup>
+<CardGroup cols={2}>
+  <Card
+    title="Vercel"
+    href="https://vercel.com/"
+  >
+    Vercel ensures seamless deployment and hosting of our platform, providing high performance and reliability. The platform is deployed on Vercel, leveraging its capabilities for serverless functions and static site generation.
+  </Card>
+  <Card
+    title="Neon Postgres"
+    href="https://neon.tech/"
+  >
+    Neon Postgres powers our database, offering robust and scalable data management solutions. Used for storing user data, templates, and other essential information.
+  </Card>
+  <Card
+    title="Next.js"
+    href="https://nextjs.org/"
+  >
+    Next.js provides server-side rendering and static site generation, enhancing the performance of our platform. The entire frontend is built using Next.js, taking advantage of its routing, API routes, and optimization features.
+  </Card>
+  <Card
+    title="CopilotKit"
+    href="https://www.copilotkit.ai/"
+  >
+    CopilotKit integrates LLM capabilities, making it easy to add production-ready Copilots into any product. Used for generating project setup steps and providing AI-driven suggestions.
+  </Card>
+  <Card
+    title="ShadCN"
+    href="https://ui.shadcn.com/"
+  >
+     ShadCN helps create beautiful and consistent UI designs, enhancing the overall user experience. Utilized for designing the user interface components.
 
-```bash npm
-npm i -g mintlify
-```
+  </Card>
+  <Card
+    title="Tailwind CSS"
+    href="https://tailwindcss.com/"
+  >
+    Tailwind CSS is a utility-first CSS framework that allows for rapid UI development. Used for styling the entire application, providing a consistent and responsive design.
+  </Card>
+  <Card
+    title="Google Gemini"
+    href="https://gemini.google.com/"
+  >
+    Google Gemini enhances the intelligence and functionality of our platform. Integrated with CopilotKit.
+  </Card>
+  <Card
+    title="NextAuth"
+    href="https://next-auth.js.org/"
+  >
+    NextAuth provides secure and flexible authentication solutions. Used to implement GitHub OAuth for user authentication.
+  </Card>
+   <Card
+    title="Mintlify"
+    href="https://mintlify.com/"
+  >
+    Mintlify provides a seamless deployment process for our documentation. Used to deploy and manage the documentation site.
+  </Card>
+</CardGroup>
 
-```bash yarn
-yarn global add mintlify
-```
-
-</CodeGroup>
-
-Step 2. Go to the docs are located (where you can find `mint.json`) and run the following command:
-
-```bash
-mintlify dev
-```
-
-The documentation website is now available at `http://localhost:3000`.
-
-### Custom Ports
-
-Mintlify uses port 3000 by default. You can use the `--port` flag to customize the port Mintlify runs on. For example, use this command to run in port 3333:
-
-```bash
-mintlify dev --port 3333
-```
-
-You will see an error like this if you try to run Mintlify in a port that's already taken:
-
-```md
-Error: listen EADDRINUSE: address already in use :::3000
-```
-
-## Mintlify Versions
-
-Each CLI is linked to a specific version of Mintlify. Please update the CLI if your local website looks different than production.
-
-<CodeGroup>
-
-```bash npm
-npm i -g mintlify@latest
-```
-
-```bash yarn
-yarn global upgrade mintlify
-```
-
-</CodeGroup>
-
-## Deployment
-
-<Tip>
-  Unlimited editors available under the [Startup
-  Plan](https://mintlify.com/pricing)
-</Tip>
-
-You should see the following if the deploy successfully went through:
-
-<Frame>
-  <img src="/images/checks-passed.png" style={{ borderRadius: '0.5rem' }} />
-</Frame>
-
-## Troubleshooting
-
-Here's how to solve some common problems when working with the CLI.
-
-<AccordionGroup>
-  <Accordion title="Mintlify is not loading">
-    Update to Node v18. Run `mintlify install` and try again.
-  </Accordion>
-  <Accordion title="No such file or directory on Windows">
-Go to the `C:/Users/Username/.mintlify/` directory and remove the `mint`
-folder. Then Open the Git Bash in this location and run `git clone
-https://github.com/mintlify/mint.git`.
-
-Repeat step 3.
-
-  </Accordion>
-  <Accordion title="Getting an unknown error">
-    Try navigating to the root of your device and delete the ~/.mintlify folder.
-    Then run `mintlify dev` again.
-  </Accordion>
-</AccordionGroup>
-
-Curious about what changed in a CLI version? [Check out the CLI changelog.](/changelog/command-line)
+## Contribution
+Contribution are welcome to any of the following areas:
+ - CLI Tool
+ - Documentation
+ - OpenSoureSmith platform
