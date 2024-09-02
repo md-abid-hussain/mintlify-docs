@@ -1,0 +1,60 @@
+---
+title: "CLI Tool"
+description: "Use the CLI tool to interact with template on OpenSourceSmith platform."
+icon: "terminal"
+---
+
+## Install CLI Tool
+
+Use npm to install the CLI tool globally on your system.
+
+```bash
+npm i open-source-smith
+```
+
+## Use CLI Tool
+
+```
+Usage: open-source-smith [options] [command]
+
+A CLI tool for managing open-source projects
+
+Options:
+  -V, --version   output the version number
+  -h, --help      display help for command
+
+Commands:
+  forge            Initialize a new open-source project
+  help [command]  display help for command
+
+```
+
+### Forge Command
+
+- forge : Initialize a new open-source project
+  - `--from <template>` : Use a specific OpenSourceSmith template
+
+**Project Types (Only available via CLI tool)**
+
+- FrontendKit
+  - React
+  - Vite
+  - NextJS
+- BackendKit
+  - Express with TypeScript
+- FullStackKit
+  - Express as backend
+  - NextJS Full Stack
+
+### Example
+
+- To initialize project using template from OpenSourceSmith
+
+  ```bash
+  open-source-smith forge --from md-abid-hussain@template-express-ts
+  ```
+
+- To initialize project using default templte available via CLI tool Only
+  ```bash
+  open-source-smith forge
+  ```

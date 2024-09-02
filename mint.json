@@ -52,7 +52,8 @@
       "pages": [
         "essentials/template-discovery",
         "essentials/template-addition",
-        "essentials/step-generation"
+        "essentials/step-generation",
+        "essentials/cli-tool"
       ]
     }
   ],
